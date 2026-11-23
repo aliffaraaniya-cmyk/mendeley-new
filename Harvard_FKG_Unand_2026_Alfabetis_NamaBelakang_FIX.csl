@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
+ <info><title>Harvard FKG Unand 2026 - Alfabetis Nama Belakang FIX</title><id>http://www.zotero.org/styles/harvard-fkg-unand-2026-alfabetis-namabelakang-fix</id><link href="http://www.zotero.org/styles/harvard-fkg-unand-2026-alfabetis-namabelakang-fix" rel="self"/><category citation-format="author-date"/><updated>2026-11-24T00:00:00+00:00</updated></info>
+ <locale><terms><term name="and">and</term><term name="et-al">et al.</term></terms></locale>
+ <macro name="author-cite"><names variable="author"><name form="short" and="text" delimiter=", " delimiter-precedes-last="never"/><et-al font-style="italic"/></names></macro>
+ <macro name="year"><date variable="issued"><date-part name="year"/></date><text variable="year-suffix"/></macro>
+ <citation et-al-min="4" et-al-use-first="1" disambiguate-add-year-suffix="true"><layout prefix="(" suffix=")" delimiter="; "><group delimiter=", "><text macro="author-cite"/><text macro="year"/></group></layout></citation>
+ <bibliography hanging-indent="true" entry-spacing="1" line-spacing="1" et-al-min="7" et-al-use-first="6">
+  <sort><key variable="author"/><key variable="issued"/><key variable="title"/></sort>
+  <layout suffix="."><group delimiter=" ">
+   <names variable="author"><name name-as-sort-order="all" sort-separator=", " and="text" delimiter=", " delimiter-precedes-last="never" initialize-with=". "/><et-al font-style="italic"/><substitute><text variable="publisher"/><text variable="title"/></substitute></names>
+   <text macro="year" prefix="(" suffix=")"/>
+   <choose><if type="article-journal article-magazine" match="any"><text variable="title" text-case="sentence" suffix="."/><text variable="container-title" font-style="italic" suffix="."/><group delimiter=""><text variable="volume"/><text variable="issue" prefix="(" suffix=")"/></group><text variable="page" prefix=": "/></if>
+   <else-if type="book chapter paper-conference thesis report" match="any"><text variable="title" text-case="sentence" suffix="."/><text variable="container-title" font-style="italic" suffix="."/><text variable="publisher-place" suffix=":"/><text variable="publisher"/><text variable="page" prefix=": "/></else-if>
+   <else><text variable="title" text-case="sentence" suffix="."/><text variable="container-title" font-style="italic" suffix="."/><text variable="publisher"/></else></choose>
+  </group></layout>
+ </bibliography>
+</style>
